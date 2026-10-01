@@ -59,7 +59,7 @@ The patient manages consent permissions, while clinic doctors access records bas
 
 ## Lab 1 — Requirements Engineering & UML Use-Case Modelling
 
-## Objective
+### Objective
 
 To identify key functions and constraints from the given healthcare scenario, define clear and verifiable functional and non-functional requirements, and model the system using UML use-case modelling.
 
@@ -86,8 +86,7 @@ The model includes:
 
 - Actors
 - Primary use cases
-- `<<include>>` relationship
-- `<<extend>>` relationship
+- include and extend relationships
 
 ### Use-Case Flow
 
@@ -100,23 +99,34 @@ The flow includes:
 - Preconditions
 - Postconditions
 - Main Success Scenario
-- Alternate Flow — Grant Already Expired
-- Alternate Flow — Clinic Doctor Mid-Session Access
+- Alternate Flow 
 
 ---
 
 ## Lab 2 — Agile Backlog Creation & Sprint Simulation in Jira
 
-## Objective
+### Objective
 
-To convert the functional requirements identified in Lab 1 into Agile backlog items, create Epics and User Stories, prioritize and estimate them, simulate sprints, and analyse sprint progress.
+To convert the functional requirements identified in Lab 1 into Agile backlog items, create Epics and User Stories, prioritize and estimate them using Fibonacci story points, simulate sprints in Jira, and analyze sprint progress through Burndown charts.
 
-- Epics
-- User Stories
-- Backlog Prioritization
-- Story Point Estimation
-- Sprint Board
-- Burndown Chart
-- Sprint Reflection
+### Epics
+- **HRCM-1:** Patient Consent & Access Control
+- **HRCM-2:** Doctor Authentication & Access Management
+- **HRCM-3:** Audit Trail & System Security
 
----
+### User Stories 
+- **HRCM-4:** Time-Bounded Access Grant (5 Story Points, High Priority)
+- **HRCM-5:** Multi-Record Batch Grant (3 Story Points, Medium Priority)
+- **HRCM-6:** Instant Consent Revocation (5 Story Points, High Priority)
+- **HRCM-7:** : Doctor Multi-Factor Authentication (3 Story Points, High Priority)
+- **HRCM-8:** Read-Only Audit Log Viewer (3 Story Points, Medium Priority)
+- **HRCM-9:** Append-Only Audit Logging (5 Story Points, High Priority)
+- **HRCM-10:** Encrypt Data (5 Story Points, High Priority)
+
+### Sprint Execution Summary
+- **Sprint 1 (13 Story Points):** Focused on core user consent granting/revocation and doctor MFA setup. All stories transitioned from To Do → In Progress → Done successfully.
+- **Sprint 2 (16 Story Points):** Focused on multi-record consent actions, administrator audit capabilities, and end-to-end data encryption. All stories completed on schedule.
+
+### Deliverables & Artifacts
+- `PES1UG24AM080_LAB1.pdf`: Lab 1 Requirements Engineering & UML Use-Case Documentation
+- `PES1UG24AM080_LAB2.pdf`: Lab 2 Jira Project Artifacts, Sprint Boards and Burndown Charts
