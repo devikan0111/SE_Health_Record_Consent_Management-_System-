@@ -86,6 +86,6 @@ in Python, one task at a time with a separate commit for each.
 3. Chips and betting (validated bets, 3:2 blackjack payout, game over at 0)
 4. Feedback and robustness (draw messages, input validation, empty deck)
 
-The [`Lab4/`](Lab4) folder has the before and after videos, the updated code and
+The [`Lab4/`](Lab4) folder has the before and after videos and
 the exported chat history. Code repo with the per-task commits:
 https://github.com/devikan0111/SE_18_blackjack
