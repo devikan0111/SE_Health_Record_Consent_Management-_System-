@@ -1,132 +1,91 @@
-# Patient Health Record Consent Management System
+# Software Engineering Lab Submissions
 
-**Software Engineering**
+Software Engineering project
+
 ## Student Details
 
 - **Name:** Devika N
 - **SRN:** PES1UG24AM080
 - **Section:** B
-- **Course:** Software Engineering 
-
----
+- **Course:** Software Engineering
 
 ## Problem Statement
+(For Labs 1-3)
 
-### Problem Statement #13 — Healthcare & Telemedicine
+**Problem Statement #13: Healthcare & Telemedicine**
 
-### Patient Health Record Consent Management System
+A patient-centric electronic health data gateway that lets patients explicitly
+manage access to their medical history. Patients give granular, time-bound
+consent to authorized healthcare personnel (clinic doctors, diagnostic
+laboratories, consulting doctors), can revoke consent before it expires, and
+can grant access to multiple records in a single action. Doctors must
+authenticate with Multi-Factor Authentication (MFA) before viewing records, and
+every consent, revocation and access event is kept in an audit trail.
 
-The Patient Health Record Consent Management System is a patient-centric electronic health data gateway designed to allow patients to explicitly manage access to their medical history.
+**Actors:** Patient, Clinic Doctor, Clinic Administrator
 
-The system allows patients to provide **granular and time-bound consent permissions** to authorized healthcare personnel such as:
+## Lab Submissions
 
-- Clinic doctors
-- Diagnostic laboratories
-- Consulting doctors
+| Lab | Topic | Location |
+| --- | --- | --- |
+| Lab 1 | Requirements Engineering & UML Use-Case Modelling | `PES1UG24AM080_LAB1.pdf` |
+| Lab 2 | Agile Backlog Creation & Sprint Simulation in Jira | `PES1UG24AM080_LAB2 .pdf` |
+| Lab 3 | Component Modelling & Architectural Pattern Selection | `PES1UG24AM080_Lab3.pdf`, `PES1UG24AM080_Lab3_Component_Diagram.png` |
+| Lab 4 | Vibe Coding with an LLM (Blackjack) | [`Lab4/`](Lab4) |
 
-Patients can control who can access their medical records, specify the records that can be accessed, and define how long the access permission remains valid.
+## Lab 1: Requirements Engineering & UML Use-Case Modelling
 
-The system also supports revocation of previously granted consent and maintains an audit trail of consent and access-related events.
+Identified the key functions and constraints, wrote verifiable requirements, and
+modelled the system with a UML use-case diagram (actors, use cases, include and
+extend relationships). The core use case documented is **UC-02: Revoke Access**.
 
----
+**Functional requirements**
+- FR-001: Grant time-bounded access to specific diagnostic records
+- FR-002: Revoke previously granted consent before expiry
+- FR-003: Require MFA before record access
+- FR-004: Grant multiple records in a single consent action
+- FR-005: Let Clinic Administrators view a read-only audit trail
 
-## Problem Context
+**Non-functional requirements**
+- NFR-001: Append-only audit trail for consent and access events
+- NFR-002: Encrypt records and consent information at rest and in transit
 
-Healthcare records contain sensitive personal information and therefore require controlled access.
+## Lab 2: Agile Backlog & Sprint Simulation (Jira)
 
-The proposed system focuses on giving patients greater control over their health information by allowing them to:
+Converted the Lab 1 requirements into 3 epics and 7 user stories, estimated them
+with Fibonacci story points, and ran two sprints in Jira with burndown charts.
 
-- Grant access to specific diagnostic records.
-- Provide access for a limited period of time.
-- Revoke previously granted access before its expiry.
-- Control access to multiple records through a single consent action.
-- Ensure that clinic doctors authenticate using Multi-Factor Authentication (MFA) before viewing patient records.
-- Maintain an audit trail of consent, revocation, and access events.
+- **Epics:** Patient Consent & Access Control, Doctor Authentication & Access
+  Management, Audit Trail & System Security
+- **Sprint 1 (13 points):** consent granting and revocation, doctor MFA
+- **Sprint 2 (16 points):** multi-record grants, audit log viewer, audit
+  logging, encryption
 
----
+## Lab 3: Component Modelling & Architectural Pattern Selection
 
-## Main Stakeholders / Actors
+Chose a **three-layer (Layered) architecture** and modelled it as a UML
+component diagram.
 
-The primary actors identified for the system include:
+- **Presentation layer:** User Interface
+- **Business layer:** Consent Manager, Authentication, Audit Logger,
+  Notification Service
+- **Data layer:** Consent & Health Record Database, Audit Log Database
 
-- **Patient**
-- **Clinic Doctor**
-- **Clinic Administrator**
+Layered architecture gives a single enforcement point for consent rules, strong
+consistency for instant revocation and auditing, and clear security boundaries.
+See `PES1UG24AM080_Lab3.pdf` for the report and the full reasoning, and
+`PES1UG24AM080_Lab3_Component_Diagram.png` for the component diagram.
 
-The patient manages consent permissions, while clinic doctors access records based on valid consent. The clinic administrator can monitor consent and access events through the audit trail.
+## Lab 4: Vibe Coding with an LLM (Blackjack)
 
----
+Used an LLM as a coding assistant to fix and extend a terminal Blackjack game
+in Python, one task at a time with a separate commit for each.
 
-## Lab 1 — Requirements Engineering & UML Use-Case Modelling
+1. Fixed the Ace scoring bug (Aces count as 1 when 11 would bust)
+2. Round resolution (blackjack, bust, dealer draws to 17, ties)
+3. Chips and betting (validated bets, 3:2 blackjack payout, game over at 0)
+4. Feedback and robustness (draw messages, input validation, empty deck)
 
-### Objective
-
-To identify key functions and constraints from the given healthcare scenario, define clear and verifiable functional and non-functional requirements, and model the system using UML use-case modelling.
-
-### Functional Requirements
-
-The system contains the following functional requirements:
-
-- **FR-001:** Grant time-bounded access to specific diagnostic records.
-- **FR-002:** Revoke previously granted consent before expiry.
-- **FR-003:** Require Multi-Factor Authentication (MFA) before record access.
-- **FR-004:** Allow multiple diagnostic records to be granted in a single consent action.
-- **FR-005:** Allow Clinic Administrators to view a read-only audit trail.
-
-### Non-Functional Requirements
-
-- **NFR-001:** Maintain an append-only audit trail for consent and access events.
-- **NFR-002:** Encrypt patient health records and consent information at rest and in transit.
-
-### UML Use-Case Model
-
-The UML use-case model represents the actors, primary system functions, and relationships between use cases.
-
-The model includes:
-
-- Actors
-- Primary use cases
-- include and extend relationships
-
-### Use-Case Flow
-
-The core use case documented in Lab 1 is:
-
-**UC-02: Revoke Access**
-
-The flow includes:
-
-- Preconditions
-- Postconditions
-- Main Success Scenario
-- Alternate Flow 
-
----
-
-## Lab 2 — Agile Backlog Creation & Sprint Simulation in Jira
-
-### Objective
-
-To convert the functional requirements identified in Lab 1 into Agile backlog items, create Epics and User Stories, prioritize and estimate them using Fibonacci story points, simulate sprints in Jira, and analyze sprint progress through Burndown charts.
-
-### Epics
-- **HRCM-1:** Patient Consent & Access Control
-- **HRCM-2:** Doctor Authentication & Access Management
-- **HRCM-3:** Audit Trail & System Security
-
-### User Stories 
-- **HRCM-4:** Time-Bounded Access Grant (5 Story Points, High Priority)
-- **HRCM-5:** Multi-Record Batch Grant (3 Story Points, Medium Priority)
-- **HRCM-6:** Instant Consent Revocation (5 Story Points, High Priority)
-- **HRCM-7:** : Doctor Multi-Factor Authentication (3 Story Points, High Priority)
-- **HRCM-8:** Read-Only Audit Log Viewer (3 Story Points, Medium Priority)
-- **HRCM-9:** Append-Only Audit Logging (5 Story Points, High Priority)
-- **HRCM-10:** Encrypt Data (5 Story Points, High Priority)
-
-### Sprint Execution Summary
-- **Sprint 1 (13 Story Points):** Focused on core user consent granting/revocation and doctor MFA setup. All stories transitioned from To Do → In Progress → Done successfully.
-- **Sprint 2 (16 Story Points):** Focused on multi-record consent actions, administrator audit capabilities, and end-to-end data encryption. All stories completed on schedule.
-
-### Deliverables & Artifacts
-- `PES1UG24AM080_LAB1.pdf`: Lab 1 Requirements Engineering & UML Use-Case Documentation
-- `PES1UG24AM080_LAB2.pdf`: Lab 2 Jira Project Artifacts, Sprint Boards and Burndown Charts
+The [`Lab4/`](Lab4) folder has the before and after videos, the updated code and
+the exported chat history. Code repo with the per-task commits:
+https://github.com/devikan0111/SE_18_blackjack
