@@ -14,7 +14,7 @@ https://github.com/devikan0111/SE_18_blackjack
 | `before.mp4` | Video of the original game before any changes |
 | `after.mp4` | Video of the final game after all changes |
 | `main.py`, `game.py`, `cards.py`, `requirements.txt` | Updated code |
-| `Lab4_chat_history.pdf` | Exported chat history with the prompts and explanations |
+| `PES1UG24AM080_Chat_History.pdf` | Exported chat history with the prompts and explanations |
 
 ## The bug that was fixed
 
