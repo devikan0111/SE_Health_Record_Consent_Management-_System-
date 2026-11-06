@@ -31,7 +31,8 @@ every consent, revocation and access event is kept in an audit trail.
 | Lab 1 | Requirements Engineering & UML Use-Case Modelling | `PES1UG24AM080_LAB1.pdf` |
 | Lab 2 | Agile Backlog Creation & Sprint Simulation in Jira | `PES1UG24AM080_LAB2 .pdf` |
 | Lab 3 | Component Modelling & Architectural Pattern Selection | `PES1UG24AM080_Lab3.pdf`, `PES1UG24AM080_Lab3_Component_Diagram.png` |
-| Lab 4 | Vibe Coding with an LLM (Blackjack) | [`Lab4/`](Lab4) |
+| Lab 4 | Vibe Coding with an LLM (Blackjack) | [`Lab4/`](https://github.com/devikan0111/SE_18_blackjack) |
+| Lab 5 | Supplier Orders System | [`L5_18_supplier_orders`](https://github.com/devikan0111/L5_18_supplier_orders) |
 
 ## Lab 1: Requirements Engineering & UML Use-Case Modelling
 
@@ -86,6 +87,11 @@ in Python, one task at a time with a separate commit for each.
 3. Chips and betting (validated bets, 3:2 blackjack payout, game over at 0)
 4. Feedback and robustness (draw messages, input validation, empty deck)
 
-The [`Lab4/`](Lab4) folder has the before and after videos and
-the exported chat history. Code repo with the per-task commits:
+The repository with the per-task commits:
 https://github.com/devikan0111/SE_18_blackjack
+
+## Lab 5: Supplier Orders System
+
+Developed and implemented the supplier orders system in a separate repository with modular architecture and database/backend components. 
+
+Repository link: https://github.com/devikan0111/L5_18_supplier_orders
